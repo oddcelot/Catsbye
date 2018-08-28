@@ -1,8 +1,7 @@
 import Typography from 'typography'
-import githubTheme from 'typography-theme-github'
+import typographyTheme from 'typography-theme-github'
+typographyTheme.baseFontSize = '16px'
 
-const typography = new Typography(githubTheme, {
-  baseFontSize: '16px',
-})
+const typography = new Typography(typographyTheme)
 
 export default typography
