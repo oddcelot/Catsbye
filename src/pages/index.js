@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'components/Container'
 import SampleComponent from 'components/SampleComponent'
 export default () => (
-  <Container>
+  <Container modifiers="visible test">
     <h1>Richard Hamming on Luck</h1>
     <div>
       <p>
