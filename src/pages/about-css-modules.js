@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './about-css-modules.module.css'
 import Container from '../components/container'
+import SampleComponent from '../components/SampleComponent'
 
 console.log(styles)
 
@@ -19,6 +20,12 @@ export default () => (
   <Container>
     <h1>About CSS Modules</h1>
     <p>CSS Modules are cool</p>
+
+    <SampleComponent
+      username="Stefan"
+      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    />
 
     <User
       username="Jane Doe"
