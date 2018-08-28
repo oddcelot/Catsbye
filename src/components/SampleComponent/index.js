@@ -1,15 +1,19 @@
 import React from 'react'
-import styles from './index.module.scss'
+import BEMHelper from 'react-bem-helper'
+import './index.scss'
 
-const SampleComponent = props => (
-  <div className={styles.user}>
-    <img src={props.avatar} className={styles.avatar} alt="" />
+const block = new BEMHelper('SampleComponent')
 
-    <div className={styles.description}>
-      <h2 className={styles.username}>{props.username}</h2>
+export default props => (
+  <div {...block({ modifiers: props.modifiers })}>
+    <img {...block('image')} src={props.avatar} alt="" />
 
-      <p className={styles.excerpt}>{props.excerpt}</p>
+    <div {...block('description')}>
+      <h2 {...block('descriptionname')}>{props.username}</h2>
+
+      <p {...block('excerpt')}>{props.excerpt}</p>
     </div>
+    <button {...block('button', 'left')}>Button</button>
+    <button {...block('button', 'right top')}>Button</button>
   </div>
 )
-export default SampleComponent

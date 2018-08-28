@@ -1,7 +1,8 @@
 import React from 'react'
-
+import Container from 'components/Container'
+import SampleComponent from 'components/SampleComponent'
 export default () => (
-  <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
+  <Container>
     <h1>Richard Hamming on Luck</h1>
     <div>
       <p>
@@ -24,5 +25,11 @@ export default () => (
       </blockquote>
     </div>
     <p>Posted April 09, 2011</p>
-  </div>
+    <SampleComponent
+      modifiers="test"
+      username="Jane Doe"
+      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    />
+  </Container>
 )
